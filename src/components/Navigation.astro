@@ -1,8 +1,18 @@
 ---
+type NavItem = {
+    url: string;
+    title: string;
+};
+
+const navItems: NavItem[] = [
+    { url: "/", title: "Home" },
+    { url: "/about/", title: "About" },
+    { url: "/blog/", title: "Blog" },
+];
 ---
 
 <div id="main-menu" class="nav-links">
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    {navItems.map((item) => (
+        <a href={item.url}>{item.title}</a>
+    ))}
 </div>

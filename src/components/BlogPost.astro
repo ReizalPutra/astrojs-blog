@@ -1,5 +1,9 @@
 ---
-const { url, title }: string = Astro.props;
+type Props = {
+    url: string;
+    title: string;
+};
+const { url, title }: Props = Astro.props;
 ---
 
 <li>
